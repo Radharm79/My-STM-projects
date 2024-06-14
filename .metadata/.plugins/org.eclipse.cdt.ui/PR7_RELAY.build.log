@@ -1,0 +1,10 @@
+17:55:35 **** Incremental Build of configuration Debug for project PR7_RELAY ****
+make -j12 all 
+arm-none-eabi-size  PR7_RELAY.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8560	     20	   1644	  10224	   27f0	PR7_RELAY.elf
+Finished building: default.size.stdout
+ 
+
+17:55:35 Build Finished. 0 errors, 0 warnings. (took 284ms)
+

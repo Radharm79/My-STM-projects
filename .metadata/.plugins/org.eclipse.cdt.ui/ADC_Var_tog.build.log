@@ -1,0 +1,10 @@
+11:44:23 **** Incremental Build of configuration Debug for project ADC_Var_tog ****
+make -j12 all 
+arm-none-eabi-size  ADC_Var_tog.elf 
+   text	   data	    bss	    dec	    hex	filename
+  16176	    100	   2100	  18376	   47c8	ADC_Var_tog.elf
+Finished building: default.size.stdout
+ 
+
+11:44:23 Build Finished. 0 errors, 0 warnings. (took 231ms)
+

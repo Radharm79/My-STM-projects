@@ -1,0 +1,137 @@
+12:01:58 **** Incremental Build of configuration Debug for project ds1307 ****
+make -j12 all 
+arm-none-eabi-gcc "../Src/ds1307_rtc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/ds1307_rtc.d" -MT"Src/ds1307_rtc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/ds1307_rtc.o"
+../Src/ds1307_rtc.c:15:1: error: unknown type name 'I2C_Handle_t'
+   15 | I2C_Handle_t g_DS1307_I2C_Handle;
+      | ^~~~~~~~~~~~
+../Src/ds1307_rtc.c: In function 'DS1307_Init':
+../Src/ds1307_rtc.c:38:9: warning: implicit declaration of function 'I2C_PeripheralControl' [-Wimplicit-function-declaration]
+   38 |         I2C_PeripheralControl(DS1307_I2C, ENABLE);
+      |         ^~~~~~~~~~~~~~~~~~~~~
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:9:33: error: 'I2C1' undeclared (first use in this function)
+    9 | #define DS1307_I2C              I2C1
+      |                                 ^~~~
+../Src/ds1307_rtc.c:38:31: note: in expansion of macro 'DS1307_I2C'
+   38 |         I2C_PeripheralControl(DS1307_I2C, ENABLE);
+      |                               ^~~~~~~~~~
+../Inc/ds1307_rtc.h:9:33: note: each undeclared identifier is reported only once for each function it appears in
+    9 | #define DS1307_I2C              I2C1
+      |                                 ^~~~
+../Src/ds1307_rtc.c:38:31: note: in expansion of macro 'DS1307_I2C'
+   38 |         I2C_PeripheralControl(DS1307_I2C, ENABLE);
+      |                               ^~~~~~~~~~
+../Src/ds1307_rtc.c:38:43: error: 'ENABLE' undeclared (first use in this function)
+   38 |         I2C_PeripheralControl(DS1307_I2C, ENABLE);
+      |                                           ^~~~~~
+../Src/ds1307_rtc.c: In function 'DS1307_I2C_PinConfig':
+../Src/ds1307_rtc.c:180:5: error: unknown type name 'GPIO_Handle_t'
+  180 |     GPIO_Handle_t I2CPins;
+      |     ^~~~~~~~~~~~~
+../Src/ds1307_rtc.c:187:12: error: request for member 'pGPIOx' in something not a structure or union
+  187 |     I2CPins.pGPIOx = DS1307_I2C_GPIO_PORT;
+      |            ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:10:33: error: 'GPIOB' undeclared (first use in this function)
+   10 | #define DS1307_I2C_GPIO_PORT    GPIOB
+      |                                 ^~~~~
+../Src/ds1307_rtc.c:187:22: note: in expansion of macro 'DS1307_I2C_GPIO_PORT'
+  187 |     I2CPins.pGPIOx = DS1307_I2C_GPIO_PORT;
+      |                      ^~~~~~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:188:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  188 |     I2CPins.GPIO_PinConfig.GPIO_PinAltFunMode = 4;
+      |            ^
+../Src/ds1307_rtc.c:189:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  189 |     I2CPins.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_ALTFN;
+      |            ^
+../Src/ds1307_rtc.c:189:43: error: 'GPIO_MODE_ALTFN' undeclared (first use in this function)
+  189 |     I2CPins.GPIO_PinConfig.GPIO_PinMode = GPIO_MODE_ALTFN;
+      |                                           ^~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:190:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  190 |     I2CPins.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_OD;
+      |            ^
+../Src/ds1307_rtc.c:190:45: error: 'GPIO_OP_TYPE_OD' undeclared (first use in this function)
+  190 |     I2CPins.GPIO_PinConfig.GPIO_PinOPType = GPIO_OP_TYPE_OD;
+      |                                             ^~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:191:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  191 |     I2CPins.GPIO_PinConfig.GPIO_PinPuPdControl = DS1307_I2C_PUPD;
+      |            ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:14:33: error: 'GPIO_PIN_PU' undeclared (first use in this function)
+   14 | #define DS1307_I2C_PUPD         GPIO_PIN_PU
+      |                                 ^~~~~~~~~~~
+../Src/ds1307_rtc.c:191:50: note: in expansion of macro 'DS1307_I2C_PUPD'
+  191 |     I2CPins.GPIO_PinConfig.GPIO_PinPuPdControl = DS1307_I2C_PUPD;
+      |                                                  ^~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:192:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  192 |     I2CPins.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+      |            ^
+../Src/ds1307_rtc.c:192:44: error: 'GPIO_SPEED_FAST' undeclared (first use in this function)
+  192 |     I2CPins.GPIO_PinConfig.GPIO_PinSpeed = GPIO_SPEED_FAST;
+      |                                            ^~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:195:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  195 |     I2CPins.GPIO_PinConfig.GPIO_PinNumber = DS1307_I2C_SCL_PIN;
+      |            ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:12:33: error: 'GPIO_PIN_NO_6' undeclared (first use in this function)
+   12 | #define DS1307_I2C_SCL_PIN      GPIO_PIN_NO_6
+      |                                 ^~~~~~~~~~~~~
+../Src/ds1307_rtc.c:195:45: note: in expansion of macro 'DS1307_I2C_SCL_PIN'
+  195 |     I2CPins.GPIO_PinConfig.GPIO_PinNumber = DS1307_I2C_SCL_PIN;
+      |                                             ^~~~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:196:5: warning: implicit declaration of function 'GPIO_Init' [-Wimplicit-function-declaration]
+  196 |     GPIO_Init(&I2CPins);
+      |     ^~~~~~~~~
+../Src/ds1307_rtc.c:199:12: error: request for member 'GPIO_PinConfig' in something not a structure or union
+  199 |     I2CPins.GPIO_PinConfig.GPIO_PinNumber = DS1307_I2C_SDA_PIN;
+      |            ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:11:33: error: 'GPIO_PIN_NO_7' undeclared (first use in this function)
+   11 | #define DS1307_I2C_SDA_PIN      GPIO_PIN_NO_7
+      |                                 ^~~~~~~~~~~~~
+../Src/ds1307_rtc.c:199:45: note: in expansion of macro 'DS1307_I2C_SDA_PIN'
+  199 |     I2CPins.GPIO_PinConfig.GPIO_PinNumber = DS1307_I2C_SDA_PIN;
+      |                                             ^~~~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c: In function 'DS1307_I2C_Config':
+../Src/ds1307_rtc.c:217:24: error: request for member 'pI2Cx' in something not a structure or union
+  217 |     g_DS1307_I2C_Handle.pI2Cx = DS1307_I2C;
+      |                        ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:9:33: error: 'I2C1' undeclared (first use in this function)
+    9 | #define DS1307_I2C              I2C1
+      |                                 ^~~~
+../Src/ds1307_rtc.c:217:33: note: in expansion of macro 'DS1307_I2C'
+  217 |     g_DS1307_I2C_Handle.pI2Cx = DS1307_I2C;
+      |                                 ^~~~~~~~~~
+../Src/ds1307_rtc.c:218:24: error: request for member 'I2C_Config' in something not a structure or union
+  218 |     g_DS1307_I2C_Handle.I2C_Config.I2C_ACKControl = I2C_ACK_ENABLE;
+      |                        ^
+../Src/ds1307_rtc.c:218:53: error: 'I2C_ACK_ENABLE' undeclared (first use in this function)
+  218 |     g_DS1307_I2C_Handle.I2C_Config.I2C_ACKControl = I2C_ACK_ENABLE;
+      |                                                     ^~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:219:24: error: request for member 'I2C_Config' in something not a structure or union
+  219 |     g_DS1307_I2C_Handle.I2C_Config.I2C_SCLSpeed = DS1307_I2C_SPEED;
+      |                        ^
+In file included from ../Src/ds1307_rtc.c:6:
+../Inc/ds1307_rtc.h:13:33: error: 'I2C_SCL_SPEED_SM' undeclared (first use in this function)
+   13 | #define DS1307_I2C_SPEED        I2C_SCL_SPEED_SM
+      |                                 ^~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:219:51: note: in expansion of macro 'DS1307_I2C_SPEED'
+  219 |     g_DS1307_I2C_Handle.I2C_Config.I2C_SCLSpeed = DS1307_I2C_SPEED;
+      |                                                   ^~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c:220:5: warning: implicit declaration of function 'I2C_Init' [-Wimplicit-function-declaration]
+  220 |     I2C_Init(&g_DS1307_I2C_Handle);
+      |     ^~~~~~~~
+../Src/ds1307_rtc.c: In function 'DS1307_Write':
+../Src/ds1307_rtc.c:243:5: warning: implicit declaration of function 'I2C_MasterSendData' [-Wimplicit-function-declaration]
+  243 |     I2C_MasterSendData(&g_DS1307_I2C_Handle, tx, 2, DS1307_I2C_ADDRESS, 0);
+      |     ^~~~~~~~~~~~~~~~~~
+../Src/ds1307_rtc.c: In function 'DS1307_Read':
+../Src/ds1307_rtc.c:264:5: warning: implicit declaration of function 'I2C_MasterReceiveData' [-Wimplicit-function-declaration]
+  264 |     I2C_MasterReceiveData(&g_DS1307_I2C_Handle, &data, 1, DS1307_I2C_ADDRESS, 0);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+make: *** [Src/subdir.mk:28: Src/ds1307_rtc.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+12:01:59 Build Failed. 26 errors, 5 warnings. (took 926ms)
+

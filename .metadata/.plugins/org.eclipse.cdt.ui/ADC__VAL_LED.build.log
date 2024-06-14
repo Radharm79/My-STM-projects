@@ -1,0 +1,76 @@
+13:25:48 **** Incremental Build of configuration Debug for project ADC__VAL_LED ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:113:35: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  113 |                                   sprintf(txbuf,"ADC= %d\n",AdcVal);
+      |                                   ^~~~~~~
+../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   20 | #include "main.h"
+  +++ |+#include <stdio.h>
+   21 | 
+../Core/Src/main.c:113:35: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  113 |                                   sprintf(txbuf,"ADC= %d\n",AdcVal);
+      |                                   ^~~~~~~
+../Core/Src/main.c:113:35: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:113:43: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  113 |                                   sprintf(txbuf,"ADC= %d\n",AdcVal);
+      |                                           ^~~~~
+      |                                           |
+      |                                           uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:113:43: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+../Core/Src/main.c:114:43: warning: passing argument 1 of 'sprintf' from incompatible pointer type [-Wincompatible-pointer-types]
+  114 |                                   sprintf(txbuf,"ADC=%l\n",temp);
+      |                                           ^~~~~
+      |                                           |
+      |                                           uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:114:43: note: expected 'char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+../Core/Src/main.c:114:56: warning: unknown conversion type character '\x0a' in format [-Wformat=]
+  114 |                                   sprintf(txbuf,"ADC=%l\n",temp);
+      |                                                        ^~
+../Core/Src/main.c:114:49: warning: too many arguments for format [-Wformat-extra-args]
+  114 |                                   sprintf(txbuf,"ADC=%l\n",temp);
+      |                                                 ^~~~~~~~~~
+../Core/Src/main.c:115:67: warning: implicit declaration of function 'strlen' [-Wimplicit-function-declaration]
+  115 |                                   HAL_UART_Transmit(&huart2,txbuf,strlen(txbuf),HAL_MAX_DELAY);
+      |                                                                   ^~~~~~
+../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'strlen'
+   20 | #include "main.h"
+  +++ |+#include <string.h>
+   21 | 
+../Core/Src/main.c:115:67: warning: incompatible implicit declaration of built-in function 'strlen' [-Wbuiltin-declaration-mismatch]
+  115 |                                   HAL_UART_Transmit(&huart2,txbuf,strlen(txbuf),HAL_MAX_DELAY);
+      |                                                                   ^~~~~~
+../Core/Src/main.c:115:67: note: include '<string.h>' or provide a declaration of 'strlen'
+../Core/Src/main.c:115:74: warning: passing argument 1 of 'strlen' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |                                   HAL_UART_Transmit(&huart2,txbuf,strlen(txbuf),HAL_MAX_DELAY);
+      |                                                                          ^~~~~
+      |                                                                          |
+      |                                                                          uint16_t * {aka short unsigned int *}
+../Core/Src/main.c:115:74: note: expected 'const char *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+../Core/Src/main.c:115:61: warning: passing argument 2 of 'HAL_UART_Transmit' from incompatible pointer type [-Wincompatible-pointer-types]
+  115 |                                   HAL_UART_Transmit(&huart2,txbuf,strlen(txbuf),HAL_MAX_DELAY);
+      |                                                             ^~~~~
+      |                                                             |
+      |                                                             uint16_t * {aka short unsigned int *}
+In file included from ../Core/Inc/stm32f4xx_hal_conf.h:411,
+                 from ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Src/main.c:20:
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:745:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+  745 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
+      |                                                                ~~~~~~~~~~~~~~~^~~~~
+arm-none-eabi-gcc -o "ADC__VAL_LED.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\SDMIDE\STMIDE WORKSPACE\ADC__VAL_LED\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC__VAL_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC__VAL_LED.elf
+ 
+arm-none-eabi-size  ADC__VAL_LED.elf 
+arm-none-eabi-objdump -h -S ADC__VAL_LED.elf  > "ADC__VAL_LED.list"
+   text	   data	    bss	    dec	    hex	filename
+  16072	    100	   2100	  18272	   4760	ADC__VAL_LED.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC__VAL_LED.list
+ 
+
+13:25:50 Build Finished. 0 errors, 10 warnings. (took 1s.759ms)
+

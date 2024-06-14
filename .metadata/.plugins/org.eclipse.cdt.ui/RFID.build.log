@@ -1,0 +1,10 @@
+11:41:29 **** Build of configuration Debug for project RFID ****
+make -j12 all 
+arm-none-eabi-size  RFID.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8548	     20	   1644	  10212	   27e4	RFID.elf
+Finished building: default.size.stdout
+ 
+
+11:41:29 Build Finished. 0 errors, 0 warnings. (took 324ms)
+

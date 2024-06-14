@@ -1,0 +1,10 @@
+18:43:52 **** Incremental Build of configuration Debug for project MLX90614_OLED ****
+make -j12 all 
+arm-none-eabi-size  MLX90614_OLED.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21440	    108	   3172	  24720	   6090	MLX90614_OLED.elf
+Finished building: default.size.stdout
+ 
+
+18:43:52 Build Finished. 0 errors, 0 warnings. (took 262ms)
+

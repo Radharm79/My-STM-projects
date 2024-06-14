@@ -1,0 +1,10 @@
+11:32:50 **** Incremental Build of configuration Debug for project Rx_TERRATERM ****
+make -j12 all 
+arm-none-eabi-size  Rx_TERRATERM.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9584	     20	   1644	  11248	   2bf0	Rx_TERRATERM.elf
+Finished building: default.size.stdout
+ 
+
+11:32:50 Build Finished. 0 errors, 0 warnings. (took 494ms)
+

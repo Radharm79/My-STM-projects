@@ -1,0 +1,10 @@
+17:48:52 **** Incremental Build of configuration Debug for project PR6_BUZZER ****
+make -j12 all 
+arm-none-eabi-size  PR6_BUZZER.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8560	     20	   1644	  10224	   27f0	PR6_BUZZER.elf
+Finished building: default.size.stdout
+ 
+
+17:48:52 Build Finished. 0 errors, 0 warnings. (took 234ms)
+

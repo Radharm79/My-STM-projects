@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;I2C_RTC/Core/Inc/ds1307_for_stm32_hal&apos; to &apos;ds1307_for_stm32_hal.h&apos;" description="Rename resource &apos;ds1307_for_stm32_hal&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Inc/ds1307_for_stm32_hal" name="ds1307_for_stm32_hal.h" stamp="1711435499676" updateReferences="true"/>
+</session>

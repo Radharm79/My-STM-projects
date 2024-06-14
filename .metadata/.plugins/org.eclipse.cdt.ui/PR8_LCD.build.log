@@ -1,0 +1,157 @@
+14:48:55 **** Incremental Build of configuration Debug for project PR8_LCD ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:221:57: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  221 |                                             lcd_display("jai jagannath",16);
+      |                                                         ^~~~~~~~~~~~~~~
+      |                                                         |
+      |                                                         char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:226:65: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  226 |                                                     lcd_display("1",1);
+      |                                                                 ^~~
+      |                                                                 |
+      |                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:232:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  232 |                                                                     lcd_display("2",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:238:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  238 |                                                                     lcd_display("3",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:245:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  245 |                                                                     lcd_display("A",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:260:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  260 |                                                                     lcd_display("4",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:266:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  266 |                                                                     lcd_display("5",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:272:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  272 |                                                                     lcd_display("6",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:278:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  278 |                                                                     lcd_display("B",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:293:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  293 |                                                                     lcd_display("7",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:299:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  299 |                                                                     lcd_display("8",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:305:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  305 |                                                                     lcd_display("9",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:311:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  311 |                                                                     lcd_display("C",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:326:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  326 |                                                                     lcd_display("*",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:332:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  332 |                                                                     lcd_display("0",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:338:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  338 |                                                                     lcd_display("#",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+../Core/Src/main.c:344:81: warning: pointer targets in passing argument 1 of 'lcd_display' differ in signedness [-Wpointer-sign]
+  344 |                                                                     lcd_display("D",1);
+      |                                                                                 ^~~
+      |                                                                                 |
+      |                                                                                 char *
+../Core/Src/main.c:120:34: note: expected 'unsigned char *' but argument is of type 'char *'
+  120 | void lcd_display(unsigned char * str,unsigned int length)
+      |                  ~~~~~~~~~~~~~~~~^~~
+arm-none-eabi-gcc -o "PR8_LCD.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\SDMIDE\STMIDE WORKSPACE\PR8_LCD\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="PR8_LCD.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+D:/SDMIDE/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `print':
+D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/main.c:28: multiple definition of `print'; ./Core/Src/LCD.o:D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/LCD.c:3: first defined here
+D:/SDMIDE/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_cmd':
+D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/main.c:95: multiple definition of `lcd_cmd'; ./Core/Src/LCD.o:D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/LCD.c:47: first defined here
+D:/SDMIDE/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_data':
+D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/main.c:104: multiple definition of `lcd_data'; ./Core/Src/LCD.o:D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/LCD.c:55: first defined here
+D:/SDMIDE/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_init':
+D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/main.c:114: multiple definition of `lcd_init'; ./Core/Src/LCD.o:D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/LCD.c:64: first defined here
+D:/SDMIDE/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld.exe: ./Core/Src/main.o: in function `lcd_display':
+D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/main.c:121: multiple definition of `lcd_display'; ./Core/Src/LCD.o:D:/SDMIDE/STMIDE WORKSPACE/PR8_LCD/Debug/../Core/Src/LCD.c:71: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: PR8_LCD.elf] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+14:48:57 Build Failed. 6 errors, 17 warnings. (took 1s.772ms)
+

@@ -1,0 +1,10 @@
+10:07:31 **** Incremental Build of configuration Debug for project LCD_4bit_lib ****
+make -j12 all 
+arm-none-eabi-size  LCD_4bit_lib.elf 
+   text	   data	    bss	    dec	    hex	filename
+   7236	     20	   1572	   8828	   227c	LCD_4bit_lib.elf
+Finished building: default.size.stdout
+ 
+
+10:07:32 Build Finished. 0 errors, 0 warnings. (took 495ms)
+

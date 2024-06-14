@@ -1,0 +1,17 @@
+13:23:25 **** Incremental Build of configuration Debug for project UART_RX_IT ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/stm32f4xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/stm32f4xx_it.d" -MT"Core/Src/stm32f4xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32f4xx_it.o"
+arm-none-eabi-gcc -o "UART_RX_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\SDMIDE\STMIDE WORKSPACE\UART_RX_IT\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART_RX_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART_RX_IT.elf
+ 
+arm-none-eabi-size  UART_RX_IT.elf 
+arm-none-eabi-objdump -h -S UART_RX_IT.elf  > "UART_RX_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+  11916	     20	   1668	  13604	   3524	UART_RX_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: UART_RX_IT.list
+ 
+
+13:23:27 Build Finished. 0 errors, 0 warnings. (took 1s.912ms)
+

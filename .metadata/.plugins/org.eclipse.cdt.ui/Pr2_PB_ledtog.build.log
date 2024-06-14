@@ -1,0 +1,10 @@
+16:09:13 **** Incremental Build of configuration Debug for project Pr2_PB_ledtog ****
+make -j12 all 
+arm-none-eabi-size  Pr2_PB_ledtog.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8632	     20	   1644	  10296	   2838	Pr2_PB_ledtog.elf
+Finished building: default.size.stdout
+ 
+
+16:09:14 Build Finished. 0 errors, 0 warnings. (took 529ms)
+

@@ -1,0 +1,10 @@
+18:29:37 **** Incremental Build of configuration Debug for project FREE_RTOS_EX ****
+make -j12 all 
+arm-none-eabi-size  FREE_RTOS_EX.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6672	     20	   1572	   8264	   2048	FREE_RTOS_EX.elf
+Finished building: default.size.stdout
+ 
+
+18:29:37 Build Finished. 0 errors, 0 warnings. (took 271ms)
+

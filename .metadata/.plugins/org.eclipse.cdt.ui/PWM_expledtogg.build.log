@@ -1,0 +1,22 @@
+09:36:23 **** Incremental Build of configuration Debug for project PWM_expledtogg ****
+make -j12 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F446xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'HAL_TIM_PeriodElapsedCallback':
+../Core/Src/main.c:51:36: error: stray '\302' in program
+   51 |           HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_5);
+      |                                    ^
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:11:13: warning: 'MX_GPIO_Init' used but never defined
+   11 | static void MX_GPIO_Init(void);
+      |             ^~~~~~~~~~~~
+../Core/Src/main.c:12:13: warning: 'MX_USART2_UART_Init' used but never defined
+   12 | static void MX_USART2_UART_Init(void);
+      |             ^~~~~~~~~~~~~~~~~~~
+../Core/Src/main.c:13:13: warning: 'MX_TIM6_Init' used but never defined
+   13 | static void MX_TIM6_Init(void);
+      |             ^~~~~~~~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j12 all" terminated with exit code 2. Build might be incomplete.
+
+09:36:24 Build Failed. 2 errors, 3 warnings. (took 610ms)
+
